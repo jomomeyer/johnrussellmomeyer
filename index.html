@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | Singer & Performer</title>
+  <meta name="description" content="Official site of Your Name, singer and performer. Listen, watch, see upcoming shows, and book.">
+  <meta property="og:title" content="Your Name | Singer & Performer">
+  <meta property="og:image" content="images/hero.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top">YOUR NAME</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a><a href="#music">Music</a><a href="#watch">Watch</a>
+      <a href="#shows">Shows</a><a href="#gallery">Gallery</a><a href="#book">Book</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Singer · Performer</p>
+      <h1>Your Name</h1>
+      <p class="tagline">One line that captures your sound and stage presence.</p>
+      <a class="btn" href="#music">Listen now</a>
+      <a class="btn ghost" href="#book">Book me</a>
+    </section>
+
+    <section id="about" class="wrap two-col reveal">
+      <img src="images/portrait.jpg" alt="Portrait of Your Name" onerror="this.style.background='#2a2233';this.removeAttribute('src')">
+      <div>
+        <h2>About</h2>
+        <p>Write 2–3 short paragraphs: where you're from, your genre and influences, notable venues, awards, or training. Keep it personal and specific.</p>
+        <p>Add what makes a show with you different: a live band, original songs, covers, theatre, jazz standards, weddings, corporate events.</p>
+      </div>
+    </section>
+
+    <section id="music" class="wrap reveal">
+      <h2>Music</h2>
+      <div class="grid">
+        <!-- Replace the src with your Spotify embed URL (Share > Embed) -->
+        <iframe src="https://open.spotify.com/embed/artist/YOUR_ARTIST_ID" height="352" loading="lazy" allow="encrypted-media" title="Spotify player"></iframe>
+        <!-- Or Bandcamp / SoundCloud embeds -->
+        <div class="links">
+          <h3>Find me on</h3>
+          <a href="#">Spotify</a><a href="#">Apple Music</a><a href="#">YouTube</a><a href="#">Bandcamp</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="watch" class="wrap reveal">
+      <h2>Watch</h2>
+      <div class="grid videos">
+        <!-- Replace VIDEO_ID with the part after v= in a YouTube link -->
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" loading="lazy" allowfullscreen title="Live performance"></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" loading="lazy" allowfullscreen title="Music video"></iframe>
+      </div>
+    </section>
+
+    <section id="shows" class="wrap reveal">
+      <h2>Upcoming Shows</h2>
+      <ul id="show-list" class="shows"></ul>
+      <p class="muted" id="no-shows" hidden>No shows announced right now. Check back soon or follow on social.</p>
+    </section>
+
+    <section id="gallery" class="wrap reveal">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="images/gallery-1.jpg" alt="Live on stage" loading="lazy" onerror="this.className='ph'">
+        <img src="images/gallery-2.jpg" alt="Studio session" loading="lazy" onerror="this.className='ph'">
+        <img src="images/gallery-3.jpg" alt="Backstage" loading="lazy" onerror="this.className='ph'">
+        <img src="images/gallery-4.jpg" alt="Crowd" loading="lazy" onerror="this.className='ph'">
+        <img src="images/gallery-5.jpg" alt="Portrait" loading="lazy" onerror="this.className='ph'">
+        <img src="images/gallery-6.jpg" alt="Performance" loading="lazy" onerror="this.className='ph'">
+      </div>
+    </section>
+
+    <section id="book" class="wrap narrow reveal">
+      <h2>Booking & Contact</h2>
+      <p>Weddings, festivals, private and corporate events, session work.</p>
+      <!-- Create a free form at formspree.io and paste your endpoint below -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>Name<input name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Event type & date<input name="event"></label>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p class="muted">Or email <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
